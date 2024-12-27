@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 export default function Home() {
@@ -26,15 +25,14 @@ export default function Home() {
       className="relative h-screen w-screen overflow-hidden cursor-pointer" 
       onClick={handleClick}
     >
-      <Image
-        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wp7930086-neymar-santos-wallpapers.jpg-u8Vs7SKNG5APjd5HXHXs4T41zE8Oa6.jpeg"
-        alt="Soccer player celebration"
-        fill
-        className="object-cover object-center"
-        priority
-        sizes="100vw"
+      <video
+        src="/background.mp4"
+        autoPlay
+        loop
+        muted
+        className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute top-0 left-0 right-0 flex items-center justify-center">
+      <div className="relative z-10 flex items-center justify-center h-full" style={{ marginTop: '-50%' }}>
         <h1 className="text-8xl font-bold text-white text-center tracking-wider">✋😝✋ Ô NEYMAR ✋😝✋</h1>
       </div>
       <audio
